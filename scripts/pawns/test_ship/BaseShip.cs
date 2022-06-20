@@ -21,9 +21,6 @@ public class BaseShip : KinematicBody2D
 
 	public void MoveTo(Vector2 TargetLocation) {
 		this.targetLocation2d = TargetLocation;
-		GD.Print(this.GetGlobalTransformWithCanvas().origin);
-		GD.Print(this.Position);
-		GD.Print(TargetLocation);
 	}
 	
 	public override void _Ready() {
@@ -33,7 +30,7 @@ public class BaseShip : KinematicBody2D
 	public override void _Draw() {
 		if (this.isSelected) {
 			Transform2D nodePosition = this.GetCanvasTransform();
-			this.DrawCircle(nodePosition.origin, 60, new Color(1,0,0));
+			this.DrawCircle(nodePosition.origin, 45, new Color(0,1,0));
 		}
 	}
 
