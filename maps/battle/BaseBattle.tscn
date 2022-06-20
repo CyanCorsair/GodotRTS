@@ -2,7 +2,7 @@
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://scenes/units/BaseUnit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://maps/battle/TestBattle.cs" type="Script" id=3]
+[ext_resource path="res://maps/battle/BaseBattle.cs" type="Script" id=3]
 
 [node name="BattleMapRoot" type="Node2D"]
 script = ExtResource( 3 )
@@ -19,8 +19,5 @@ texture = ExtResource( 1 )
 position = Vector2( 640, 512 )
 current = true
 
-[node name="TestShip" parent="." instance=ExtResource( 2 )]
-position = Vector2( 640, 703 )
-
-[node name="TestShip2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 639, 597 )
+[node name="BaseShip" parent="." instance=ExtResource( 2 )]
+position = Vector2( 403, 669 )
