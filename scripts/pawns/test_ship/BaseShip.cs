@@ -1,5 +1,11 @@
 using Godot;
-using System;
+using System.Collections.Generic;
+
+public struct ShipComponentSlot {
+	public BaseShipComponent componentInSlot;
+	public int maxSize;
+	public string socketName;
+}
 
 enum ShipState {
 	IDLE,
@@ -19,6 +25,7 @@ public class BaseShip : KinematicBody2D
 	[Export] public int speed = 100;
 	[Export] public float turnSpeed = 0.05f;
 	[Export] public string shipName = "Template cruiser";
+	private Dictionary<ShipComponentSlot, BaseShipComponent> shipComponents = new Dictionary<ShipComponentSlot, BaseShipComponent>();
 
 	private int baseHealth = 100;
 	private float baseArmor = 0.1f;
