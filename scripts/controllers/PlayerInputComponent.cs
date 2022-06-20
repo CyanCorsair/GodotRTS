@@ -28,7 +28,7 @@ public class PlayerInputComponent : Node
 	}
 
 	public override void _Ready() {
-		TestBattle parentNodeInstance = (TestBattle)GetNode("/root/BattleMapRoot");
+		BaseBattle parentNodeInstance = (BaseBattle)GetNode("/root/BattleMapRoot");
 		this.owningPlayerController = parentNodeInstance.GetPlayerController();
 	}
 

@@ -1,7 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
-public class TestBattle : Node2D
+public class BaseBattle : Node2D
 {
 	private PlayerController _playerControllerInstance = null;
 

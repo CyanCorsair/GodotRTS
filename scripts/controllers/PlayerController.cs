@@ -6,9 +6,9 @@ public class PlayerController
 	private List<BaseShip> _selectedShips = new List<BaseShip>();
 	private PlayerInputComponent _inputComponent = null;
 	private int _playerControllerId;
-	private TestBattle _battleInstance = null;
+	private BaseBattle _battleInstance = null;
 
-	public PlayerController(TestBattle BattleInstance) {
+	public PlayerController(BaseBattle BattleInstance) {
 		this._battleInstance = BattleInstance;
 		this._playerControllerId = 0;
 	}
